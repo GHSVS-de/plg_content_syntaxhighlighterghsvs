@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="content" method="upgrade">
+	<name>PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS</name>
+	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer</author>
+	<creationDate>2019-06-20</creationDate>
+	<copyright>Copyright (C) 2019, G@HService Berlin Neukölln, Volkmar Volli Schlothauer. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE file</license>
+	<authorEmail></authorEmail>
+	<authorUrl>https://www.ghsvs.de</authorUrl>
+	<version>2019.06.25</version>
+	<description>PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_XML_DESC</description>
+	<versionHistory>
+		https://updates.ghsvs.de/changelog.php?file=syntaxhighlighterghsvs
+	</versionHistory>
+
+	<updateservers><server type="extension" priority="1" name="PLG_SYSTEM_BACKUPSLOGGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/syntaxhighlighterghsvs-update.xml</server></updateservers>
+
+	<changelogurl>https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/syntaxhighlighterghsvs-changelog.xml</changelogurl>
+
+	<scriptfile>installerScript.php</scriptfile>
+	<!--<minimumPhp>7.0.0</minimumPhp>-->
+	<!-- <maximumPhp>5.4.0</maximumPhp> -->
+	<minimumJoomla>3.9.8</minimumJoomla>
+	<!--<maximumJoomla>3.9.99999</maximumJoomla>-->
+	<allowDowngrades>1</allowDowngrades>
+
+	<files>
+		<filename plugin="syntaxhighlighterghsvs">syntaxhighlighterghsvs.php</filename>
+		<folder>fields</folder>
+		<folder>language</folder>
+		<folder>layouts</folder>
+		<folder>myforms</folder>
+		<filename>helper.php</filename>
+		<filename>installerScript.php</filename>
+		<filename>LICENSE.txt</filename>
+	</files>
+
+	<media destination="plg_content_syntaxhighlighterghsvs" folder="media">
+		<folder>_syntaxhighlighter-version</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>sass</folder>
+		<filename>GPL-LICENSE</filename>
+		<filename>MIT-LICENSE</filename>
+	</media>
+
+	<config>
+
+		<fields name="params" addfieldpath="plugins/content/syntaxhighlighterghsvs/fields">
+			<fieldset name="basic">
+				<field name="assetsbe" type="plgContentSyntaxhighlighterGhsvs.assetsbe" hidden="true"
+					loadjs="false" loadJQuery="false" loadcss="true" />
+
+				<field name="stylesheets" type="plgContentSyntaxhighlighterGhsvs.stylesheets" default="shCoreDefault"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_STYLESHEET"
+					description="">
+						<option value="">JNONE</option>
+						<option value="shCore">PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_SHCORE</option>
+				</field>
+
+				<field name="combine" type="list" default="1" filter="integer"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_COMBINE"
+					description="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_COMBINE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field name="robots" type="list" default="0" filter="integer"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_ROBOTS"
+					description="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_ROBOTS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="advanced"
+				label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELD_LABEL_ADVANCEDPARAMS">
+<!--http://alexgorbatchev.com/SyntaxHighlighter/manual/configuration/-->
+
+				<field name="stripbrs" type="list" default="0" filter="integer"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_STRIPTAG_LABEL"
+					description="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_STRIPTAG_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field name="tag" type="text" default="pre" readonly="true" filter="word"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_TAG_LABEL"
+					description="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_TAG_DESC"
+				/>
+
+				<field name="auto-links" type="list" default="0" filter="integer"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_AUTO_LINKS"
+					description="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_AUTO_LINKS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field name="quick-code" type="list" default="1" filter="integer"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_QUICK_CODE"
+					description="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_QUICK_CODE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field name="class-name" type="text" default="" filter="string"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_CLASS_NAME"
+					description="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_CLASS_NAME_DESC"
+				/>
+
+				<field name="gutter" type="list" default="1" filter="integer"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_GUTTER"
+					description="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_GUTTER_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="fieldsetCustomCss"
+				label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELDSET_CUSTOMCSS">
+
+				<field name="customCss" type="subform" min="1" max="100" multiple="true"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_CUSTOMCSS" description=""
+					hiddenLabel="true"
+					formsource="plugins/content/syntaxhighlighterghsvs/myforms/subform-customCss.xml"
+					layout="joomla.form.field.subform.repeatable" groupByFieldset="false"
+					default='{
+					"customCss0":{
+						"selector":".syntaxhighlighter code",
+						"cssRules":"white-space: pre !important;",
+						"active":1,
+						"note":"Line break fix"},
+
+					"customCss1":{
+						"selector":".syntaxhighlighter .container:before,\n.syntaxhighlighter .container:after",
+						"cssRules":"content: none !important;",
+						"active":1,
+						"note":"Fix for older Bootstrap versions"},
+
+					"customCss2":{
+						"selector":".syntaxhighlighter",
+						"cssRules":"max-height: 340px;\nborder: 1px solid #ccc;",
+						"active":1,
+						"note":"y-scroll for long code blocks."},
+
+					"customCss3":{
+						"selector":".syntaxhighlighter a,\n.syntaxhighlighter div,\n.syntaxhighlighter code,\n.syntaxhighlighter table,\n.syntaxhighlighter table td,\n.syntaxhighlighter table tr,\n.syntaxhighlighter table tbody,\n.syntaxhighlighter table thead,\n.syntaxhighlighter table caption,\n.syntaxhighlighter textarea",
+						"cssRules":"line-height: 1.2em !important;",
+						"active":1,
+						"note":"Slightly enlarge line heights."},
+
+					"customCss4":{
+						"selector":".syntaxhighlighter code",
+						"cssRules":"background-color: #fafafa !important;",
+						"active":1,
+						"note":"light grey behind text; also in accentuated lines."}
+					}'
+				/>
+
+			</fieldset>
+
+			<fieldset name="fieldsetBrushesAndAliases"
+				label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELDSET_BRUSHESANDALIASES">
+
+				<field name="Brushesandaliases"
+					type="Brushesandaliases"
+					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_BRUSHESANDALIASES"
+					hiddenLabel="true"
+				/>
+
+			</fieldset>
+		</fields>
+
+	</config>
+</extension>

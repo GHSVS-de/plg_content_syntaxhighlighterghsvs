@@ -1,0 +1,141 @@
+/* line 41, ../sass/_theme_template.scss */
+.syntaxhighlighter {
+  background-color: #0a2b1d !important;
+}
+/* line 46, ../sass/_theme_template.scss */
+.syntaxhighlighter .line.alt1 {
+  background-color: #0a2b1d !important;
+}
+/* line 47, ../sass/_theme_template.scss */
+.syntaxhighlighter .line.alt2 {
+  background-color: #0a2b1d !important;
+}
+/* line 51, ../sass/_theme_template.scss */
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+  background-color: #233729 !important;
+}
+/* line 52, ../sass/_theme_template.scss */
+.syntaxhighlighter .line.highlighted.number {
+  color: white !important;
+}
+/* line 57, ../sass/_theme_template.scss */
+.syntaxhighlighter table caption {
+  color: #f8f8f8 !important;
+}
+/* line 63, ../sass/_theme_template.scss */
+.syntaxhighlighter table td.code .container textarea {
+  background: #0a2b1d;
+  color: #f8f8f8;
+}
+/* line 72, ../sass/_theme_template.scss */
+.syntaxhighlighter .gutter {
+  color: #497958 !important;
+}
+/* line 74, ../sass/_theme_template.scss */
+.syntaxhighlighter .gutter .line {
+  border-right: 3px solid #41a83e !important;
+}
+/* line 77, ../sass/_theme_template.scss */
+.syntaxhighlighter .gutter .line.highlighted {
+  background-color: #41a83e !important;
+  color: #0a2b1d !important;
+}
+/* line 84, ../sass/_theme_template.scss */
+.syntaxhighlighter.printing .line .content {
+  border: none !important;
+}
+/* line 86, ../sass/_theme_template.scss */
+.syntaxhighlighter.collapsed {
+  overflow: visible !important;
+}
+/* line 89, ../sass/_theme_template.scss */
+.syntaxhighlighter.collapsed .toolbar {
+  color: #96dd3b !important;
+  background: #000 !important;
+  border: 1px solid #41a83e !important;
+}
+/* line 94, ../sass/_theme_template.scss */
+.syntaxhighlighter.collapsed .toolbar a {
+  color: #96dd3b !important;
+}
+/* line 96, ../sass/_theme_template.scss */
+.syntaxhighlighter.collapsed .toolbar a:hover {
+  color: #fff !important;
+}
+/* line 101, ../sass/_theme_template.scss */
+.syntaxhighlighter .toolbar {
+  color: #fff !important;
+  background: #41a83e !important;
+  border: none !important;
+}
+/* line 105, ../sass/_theme_template.scss */
+.syntaxhighlighter .toolbar a {
+  color: #fff !important;
+}
+/* line 107, ../sass/_theme_template.scss */
+.syntaxhighlighter .toolbar a:hover {
+  color: #ffe862 !important;
+}
+/* line 112, ../sass/_theme_template.scss */
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+  color: #f8f8f8 !important;
+}
+/* line 113, ../sass/_theme_template.scss */
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+  color: #336442 !important;
+}
+/* line 114, ../sass/_theme_template.scss */
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+  color: #9df39f !important;
+}
+/* line 115, ../sass/_theme_template.scss */
+.syntaxhighlighter .keyword {
+  color: #96dd3b !important;
+}
+/* line 116, ../sass/_theme_template.scss */
+.syntaxhighlighter .preprocessor {
+  color: #91bb9e !important;
+}
+/* line 117, ../sass/_theme_template.scss */
+.syntaxhighlighter .variable {
+  color: #ffaa3e !important;
+}
+/* line 118, ../sass/_theme_template.scss */
+.syntaxhighlighter .value {
+  color: #f7e741 !important;
+}
+/* line 119, ../sass/_theme_template.scss */
+.syntaxhighlighter .functions {
+  color: #ffaa3e !important;
+}
+/* line 120, ../sass/_theme_template.scss */
+.syntaxhighlighter .constants {
+  color: #e0e8ff !important;
+}
+/* line 121, ../sass/_theme_template.scss */
+.syntaxhighlighter .script {
+  font-weight: bold !important;
+  color: #96dd3b !important;
+  background-color: none !important;
+}
+/* line 126, ../sass/_theme_template.scss */
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+  color: #eb939a !important;
+}
+/* line 127, ../sass/_theme_template.scss */
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
+  color: #91bb9e !important;
+}
+/* line 128, ../sass/_theme_template.scss */
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
+  color: #edef7d !important;
+}
+
+/* line 34, ../sass/shThemeDjango.scss */
+.syntaxhighlighter .comments {
+  font-style: italic !important;
+}
+/* line 35, ../sass/shThemeDjango.scss */
+.syntaxhighlighter .keyword {
+  font-weight: bold !important;
+}
