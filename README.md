@@ -1,13 +1,13 @@
 # Joomla plugin plg_content_syntaxhighlighterghsvs ("Content - Syntax Highlighter by GHSVS.de")
 
+![](media/images/PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_450px.png?raw=true)
+
 Code syntax highlighter that uses SyntaxHighlighter library (V3.0.90) of Alex Gorbatchev (https://github.com/syntaxhighlighter/syntaxhighlighter). Yes, it's a dinosaur but supports line numbers and line accentuation.
 
 - Code syntax highlighter plugin for Joomla.
 - Supports line numbers.
 - Supports accentuation of lines.
 - No JQuery, no Mootools dependencies.
-
-![Logo](__logo/PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_450px.png?raw=true "Title")
 
 ## Last tests
 - Joomla 3.9.8
