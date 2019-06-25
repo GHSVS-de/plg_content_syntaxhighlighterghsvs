@@ -18,20 +18,13 @@ class JFormFieldBrushesandaliases extends FormField
 {
 	protected $type = 'Brushesandaliases';
 
-	/**
-	 * Method to get the field label markup.
-	 *
-	 * @return  string  The field label markup.
-	 *
-	 * @since   1.7.0
-	 */
-	protected function getLabel()
+	protected function getInput()
 	{
 		$title = $this->element['label'] ? (string) $this->element['label'] : ($this->element['title'] ? (string) $this->element['title'] : '');
 		$heading = $this->element['heading'] ? (string) $this->element['heading'] : 'h4';
-		
+
 		\JLoader::register('SyntaxhighlighterGhsvsHelper', dirname(__DIR__) . '/helper.php');
-		
+
 		if (($description = \SyntaxhighlighterGhsvsHelper::getBrushfileAliasesMap()) === false)
 		{
 			$description = 'Sorry! Fatal error! Reload the page. If error persits it would be nice if you inform the developer of this plugin.';
@@ -64,18 +57,10 @@ class JFormFieldBrushesandaliases extends FormField
 
 		$html[] = !empty($title) ? '<' . $heading . '>' . Text::_($title) . '</' . $heading . '>' : '';
 		$html[] = !empty($description) ? $description : '';
-
 		return '</div><div ' . $class . '>' . implode('', $html);
 	}
 
-	/**
-	 * Method to get the field input markup.
-	 *
-	 * @return  string  The field input markup.
-	 *
-	 * @since   1.7.0
-	 */
-	protected function getInput()
+	protected function getLabel()
 	{
 		return '';
 	}
