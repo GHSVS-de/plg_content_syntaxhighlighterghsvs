@@ -38,6 +38,7 @@
 	<media destination="plg_content_syntaxhighlighterghsvs" folder="media">
 		<folder>_syntaxhighlighter-version</folder>
 		<folder>css</folder>
+		<folder>images</folder>
 		<folder>js</folder>
 		<folder>sass</folder>
 		<filename>GPL-LICENSE</filename>
@@ -47,11 +48,38 @@
 	<config>
 
 		<fields name="params" addfieldpath="plugins/content/syntaxhighlighterghsvs/fields">
+
+			<fieldset name="thanks" label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELDSET_TANKS_AND_LICENSES">
+				<field name="spacerthanks" type="plgContentSyntaxhighlighterGhsvs.longdescription"
+					descriptiontext="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_SPACERTHANKS"
+					hidden="true"
+					additionalClass="thanks" />
+			</fieldset><!--/thanks-->
+
+			<fieldset name="long_description"
+				label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELDSET_LONG_DESCRIPTION">
+
+				<field name="version" type="plgContentSyntaxhighlighterGhsvs.version"
+					label="JVERSION"
+					description=""/>
+
+				<field name="long_descriptiomNote" type="plgContentSyntaxhighlighterGhsvs.longdescription"
+					descriptiontext="{INCLUDE-FILE:Long-Description.html:}"
+					hidden="true"
+					additionalClass="long_descriptiom" />
+
+			</fieldset><!--/long_description-->
+
 			<fieldset name="basic">
 				<field name="assetsbe" type="plgContentSyntaxhighlighterGhsvs.assetsbe" hidden="true"
 					loadjs="false" loadJQuery="false" loadcss="true" />
+			</fieldset>
 
-				<field name="stylesheets" type="plgContentSyntaxhighlighterGhsvs.stylesheets" default="shCoreDefault"
+			<fieldset name="advanced"
+				label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELD_LABEL_ADVANCEDPARAMS">
+
+				<field name="stylesheets" type="plgContentSyntaxhighlighterGhsvs.stylesheets"
+					default="shCoreDefault"
 					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_STYLESHEET"
 					description="">
 						<option value="">JNONE</option>
@@ -72,10 +100,6 @@
 						<option value="1">JYES</option>
 				</field>
 
-			</fieldset>
-
-			<fieldset name="advanced"
-				label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELD_LABEL_ADVANCEDPARAMS">
 <!--http://alexgorbatchev.com/SyntaxHighlighter/manual/configuration/-->
 
 				<field name="stripbrs" type="list" default="0" filter="integer"
@@ -119,7 +143,8 @@
 			</fieldset>
 
 			<fieldset name="fieldsetCustomCss"
-				label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELDSET_CUSTOMCSS">
+				label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELDSET_CUSTOMCSS"
+				description="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELDSET_CUSTOMCSS_DESC">
 
 				<field name="customCss" type="subform" min="1" max="100" multiple="true"
 					label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_CUSTOMCSS" description=""
@@ -163,6 +188,11 @@
 
 			<fieldset name="fieldsetBrushesAndAliases"
 				label="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELDSET_BRUSHESANDALIASES">
+
+				<field name="fieldsetBrushesAndAliasesNote"
+					type="plgContentSyntaxhighlighterGhsvs.longdescription"
+					descriptiontext="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_FIELDSET_BRUSHESANDALIASES_DESC"
+					hidden="true" />
 
 				<field name="Brushesandaliases"
 					type="Brushesandaliases"

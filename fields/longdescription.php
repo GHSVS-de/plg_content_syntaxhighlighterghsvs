@@ -2,7 +2,7 @@
 /*
 GHSVS 2019-02-01
 Usage:
-<field name="LongDescription001" 
+<field name="LongDescription001"
 		type="plgContentSyntaxhighlighterGhsvs.longdescription" // Mandatory.
 		hiddenLabel="true" // Recommended.
 		additionalClass="optional irgendwas" // Optional-
@@ -10,13 +10,13 @@ Usage:
 		contentToggler="true" // Optional. Hide the Description plus a show/hide button.
 		contentTogglerLabel="WAHT_EVER_STRING" // Optional. Default PLG_HYPHENATEGHSVS_SHOW_HIDE_BUTTON
 		/>
-		
+
 Language string/descriptiontext can contain something like
 
 {INCLUDE-FILE:/plugins/system/hyphenateghsvs/LICENSE_Hyphenator.txt}
 
 Start with "/" if file is somewhere in the JoomlaROOT and not in /language/.
-Just file name 
+Just file name
 {INCLUDE-FILE:LICENSE_Hyphenator.txt}
 if file is in language/xy-XY/ folder.
 
@@ -32,14 +32,13 @@ Language string/descriptiontext can contain something like
 Only 1 occurence is allowed.
 To create a headline.
 
-Uses own JLayout to get rid of controls CSS class. JLayout is /plugins-directory/layouts/ghsvs/renderfield.php 
+Uses own JLayout to get rid of controls CSS class. JLayout is /plugins-directory/layouts/ghsvs/renderfield.php
 
 */
 
 defined('JPATH_PLATFORM') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Form\FormField;
-#use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Layout\FileLayout;
 
@@ -50,14 +49,14 @@ class plgContentSyntaxhighlighterGhsvsFormFieldLongDescription extends FormField
 	protected $renderLayout = 'ghsvs.renderfield';
 
 	protected $myLayoutPath = 'plugins/content/syntaxhighlighterghsvs/layouts';
-	
+
 	protected $myLanguagePath = 'plugins/content/syntaxhighlighterghsvs/language';
 
 	// Zeigt Render-Pfade der Felder-Layouts, if TRUE.
 	protected $debugLayouts = false;
-	
+
 	protected static $loaded;
-	
+
 	protected function getInput()
 	{
 		$additionalClass = isset($this->element['additionalClass'])
@@ -68,10 +67,10 @@ class plgContentSyntaxhighlighterGhsvsFormFieldLongDescription extends FormField
 		$contentToggler = $this->element['contentToggler'] ?? '';
 
 		$additionalClass = !$contentToggler ?: $additionalClass . ' withContentToggler';
-		
+
 		$contentTogglerLabel = isset($this->element['contentTogglerLabel'])
 			? (string) $this->element['contentTogglerLabel'] : 'PLG_HYPHENATEGHSVS_SHOW_HIDE_BUTTON';
-		
+
 		$contentTogglerLabel = Text::_($contentTogglerLabel);
 
 		// Easier handling for License texts etc.:
@@ -105,7 +104,7 @@ class plgContentSyntaxhighlighterGhsvsFormFieldLongDescription extends FormField
 							}
 						}
 					}
-					
+
 					// No trailing : means do nl2br.
 					if (!isset($no_nl[1]))
 					{
@@ -135,14 +134,14 @@ class plgContentSyntaxhighlighterGhsvsFormFieldLongDescription extends FormField
 		if ($contentToggler)
 		{
 			$target = $this->id . 'contentToggler';
-			
+
 			$html[] = '<button type=button class=contentToggler data-togglerContent=' . $target . '>';
 			$html[] = $contentTogglerLabel;
 			$html[] = '</button>';
 			$html[] = '<div class=togglerContent id=' . $target . '>';
 		}
 		$html[] = $descriptiontext;
-		
+
 		if ($contentToggler)
 		{
 			$html[] = '</div>';
@@ -176,10 +175,10 @@ class plgContentSyntaxhighlighterGhsvsFormFieldLongDescription extends FormField
 			$document->addStyleDeclaration($css);
 			self::$loaded = 1;
 		}
-		
+
 		return implode('', $html);
 	}
-	
+
 	/**
 	 * Allow to override renderer include paths in child fields
 	 *
