@@ -7,9 +7,7 @@ Code syntax highlighter that uses SyntaxHighlighter library (V3.0.90) of Alex Go
 - Supports accentuation of lines.
 - No JQuery, no Mootools dependencies.
 
-![Logo](PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS.png?raw=true "Title")
-
-[[https://github.com/GHSVS-de/plg_content_syntaxhighlighterghsvs/blob/master/PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS.png]]
+![Logo](__logo/PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_450px.png?raw=true "Title")
 
 ## Last tests
 - Joomla 3.9.8
