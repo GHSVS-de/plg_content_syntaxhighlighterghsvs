@@ -37,3 +37,6 @@ YOUR PHP CODE HERE
 
 ## Recommended
 - For easier insertion of code snippets in Joomla editors: Install also the editor button plugin https://github.com/GHSVS-de/plg_editors-xtd_syntaxhighlighterghsvs/releases
+
+## Changelogs
+https://updates.ghsvs.de/changelog.php?file=syntaxhighlighterghsvs
