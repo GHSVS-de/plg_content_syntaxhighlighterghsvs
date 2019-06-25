@@ -5,6 +5,7 @@ Code syntax highlighter that uses SyntaxHighlighter library (V3.0.90) of Alex Go
 - Code syntax highlighter plugin for Joomla.
 - Supports line numbers.
 - Supports accentuation of lines.
+- No JQuery, no Mootools dependencies.
 
 ## Last tests
 - Joomla 3.9.8
