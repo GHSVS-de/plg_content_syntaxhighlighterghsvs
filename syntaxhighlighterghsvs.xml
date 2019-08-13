@@ -13,7 +13,7 @@
 		https://updates.ghsvs.de/changelog.php?file=syntaxhighlighterghsvs
 	</versionHistory>
 
-	<updateservers><server type="extension" priority="1" name="PLG_SYSTEM_BACKUPSLOGGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/syntaxhighlighterghsvs-update.xml</server></updateservers>
+	<updateservers><server type="extension" priority="1" name="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/syntaxhighlighterghsvs-update.xml</server></updateservers>
 
 	<changelogurl>https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/syntaxhighlighterghsvs-changelog.xml</changelogurl>
 

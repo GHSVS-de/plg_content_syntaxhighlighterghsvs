@@ -263,7 +263,7 @@ class plgContentSyntaxhighlighterGhsvs extends CMSPlugin
 		$customCssRules = $this->params->get('customCss', null);
 		$css = '';
 
-		if (!empty($customCssRules) && is_object($customCssRules))
+		if (is_object($customCssRules) && count(get_object_vars($customCssRules)))
 		{
 			foreach ($customCssRules as $customCssRule)
 			{
