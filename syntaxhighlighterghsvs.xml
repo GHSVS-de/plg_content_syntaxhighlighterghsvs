@@ -169,7 +169,7 @@
 
 					"customCss2":{
 						"selector":".syntaxhighlighter",
-						"cssRules":"max-height: 340px;\nborder: 1px solid #ccc;",
+						"cssRules":"max-height: 340px;\nborder: 1px solid #ccc;\npadding-top: 11px;\npadding-bottom: 11px;",
 						"active":1,
 						"note":"y-scroll for long code blocks."},
 
@@ -182,7 +182,7 @@
 					"customCss4":{
 						"selector":".syntaxhighlighter code",
 						"cssRules":"background-color: #fafafa !important;",
-						"active":1,
+						"active":0,
 						"note":"light grey behind text; also in accentuated lines."}
 					}'
 				/>

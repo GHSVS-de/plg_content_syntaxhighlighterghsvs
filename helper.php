@@ -2,6 +2,7 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Filesystem\Folder;
+use Joomla\CMS\Filesystem\File;
 
 class SyntaxhighlighterGhsvsHelper
 {
@@ -60,8 +61,8 @@ class SyntaxhighlighterGhsvsHelper
 
 			if ($brushfileAliasesMap && $aliasesBrushfileMap)
 			{
-				file_put_contents($brushfileAliasesMapJson, json_encode($brushfileAliasesMap));
-				file_put_contents($aliasesBrushfileMapJson, json_encode($aliasesBrushfileMap));
+				File::write($brushfileAliasesMapJson, json_encode($brushfileAliasesMap));
+				File::write($aliasesBrushfileMapJson, json_encode($aliasesBrushfileMap));
 			}
 		}
 
@@ -97,7 +98,7 @@ class SyntaxhighlighterGhsvsHelper
 				$collect[str_replace('.css', '', $file)] = $file;
 			}
 
-			file_put_contents($coreStylesheets, json_encode($collect));
+			File::write($coreStylesheets, json_encode($collect));
 		}
 
 		if (is_file($coreStylesheets))
