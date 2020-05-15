@@ -3,12 +3,13 @@
 	<name>PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS</name>
 	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer</author>
 	<creationDate>2019-06-20</creationDate>
-	<copyright>Copyright (C) 2019, G@HService Berlin Neukölln, Volkmar Volli Schlothauer. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2019 - 2020, G@HService Berlin Neukölln, Volkmar Volli Schlothauer. All rights reserved.</copyright>
 	<license>GNU General Public License version 3 or later; see LICENSE file</license>
 	<authorEmail></authorEmail>
 	<authorUrl>https://www.ghsvs.de</authorUrl>
-	<version>2019.08.13</version>
+	<version>2020.05.15</version>
 	<description>PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS_XML_DESC</description>
+
 	<versionHistory>
 		https://updates.ghsvs.de/changelog.php?file=syntaxhighlighterghsvs
 	</versionHistory>
@@ -16,6 +17,8 @@
 	<updateservers><server type="extension" priority="1" name="PLG_CONTENT_SYNTAXHIGHLIGHTERGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/syntaxhighlighterghsvs-update.xml</server></updateservers>
 
 	<changelogurl>https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/syntaxhighlighterghsvs-changelog.xml</changelogurl>
+	
+	<infourl>https://github.com/GHSVS-de/plg_content_syntaxhighlighterghsvs/blob/master/README.md</infourl>
 
 	<scriptfile>installerScript.php</scriptfile>
 	<!--<minimumPhp>7.0.0</minimumPhp>-->
