@@ -1,0 +1,29 @@
+
+.syntaxhighlighter
+{
+	.variable
+	{
+		color: darken(#a70, 10%) !important;
+	}
+
+	.css.value
+	{
+		color: darken(#090, 15%) !important;
+	}
+	.color1
+	{
+		color: darken(gray, 15%) !important;
+	}
+	.functions
+	{
+		color: darken(#ff1493, 20%) !important;
+	}
+	.gutter
+	{
+		color: $black !important;
+		.line.highlighted
+		{
+			background-color: darken(#28a745, 15%) !important;
+		}
+	}
+}
